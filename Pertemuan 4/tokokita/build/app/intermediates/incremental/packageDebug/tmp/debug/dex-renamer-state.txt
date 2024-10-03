@@ -1,0 +1,16 @@
+#Tue Oct 01 11:23:59 WIB 2024
+base.0=/Users/biy/Kuliah/Semester 5/Praktikum Pemrograman Mobile/Pertemuan 4/tokokita/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/biy/Kuliah/Semester 5/Praktikum Pemrograman Mobile/Pertemuan 4/tokokita/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/biy/Kuliah/Semester 5/Praktikum Pemrograman Mobile/Pertemuan 4/tokokita/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/Users/biy/Kuliah/Semester 5/Praktikum Pemrograman Mobile/Pertemuan 4/tokokita/build/app/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+base.4=/Users/biy/Kuliah/Semester 5/Praktikum Pemrograman Mobile/Pertemuan 4/tokokita/build/app/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=1/classes.dex
+path.3=7/classes.dex
+path.4=0/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex
+renamed.4=classes5.dex

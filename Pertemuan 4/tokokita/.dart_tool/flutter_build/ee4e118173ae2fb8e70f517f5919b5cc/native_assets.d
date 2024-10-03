@@ -1,0 +1,1 @@
+ /Users/biy/Kuliah/Semester\ 5/Praktikum\ Pemrograman\ Mobile/Pertemuan\ 4/tokokita/.dart_tool/flutter_build/ee4e118173ae2fb8e70f517f5919b5cc/native_assets.yaml: 
