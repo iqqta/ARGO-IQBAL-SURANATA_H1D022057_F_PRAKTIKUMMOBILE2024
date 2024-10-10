@@ -29,7 +29,7 @@ class ProdukBloc {
   }
 
   static Future updateProduk({required Produk produk}) async {
-    String apiUrl = ApiUrl.updateProduk((produk.id!));
+    String apiUrl = ApiUrl.updateProduk(int.parse(produk.id!));
     print(apiUrl);
     var body = {
       "kode_produk": produk.kodeProduk,

@@ -1,564 +1,212 @@
-ERROR - 2024-10-03 13:38:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
+ERROR - 2024-10-03 13:03:17 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:186
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8889, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#6 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#11 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 {main}
-
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#5 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#6 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#10 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#11 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#12 {main}
-CRITICAL - 2024-10-03 13:38:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
-[Method: POST, Route: login]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
-FROM `member`
-WHERE `email` = :email:
- LIMIT 1', [...], false)
- 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
- 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
- 5 APPPATH\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login()
- 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
- 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-ERROR - 2024-10-03 13:42:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8889, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#6 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#11 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'toko_api', 8889, '', 0)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #14 {main}
 
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:231
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#5 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#6 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#10 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#11 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#12 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#6 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #13 {main}
-CRITICAL - 2024-10-03 13:42:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+CRITICAL - 2024-10-03 13:03:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
 [Method: POST, Route: login]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
 FROM `member`
 WHERE `email` = :email:
  LIMIT 1', [...], false)
- 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
- 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
- 5 APPPATH\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login()
- 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
- 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-ERROR - 2024-10-03 13:43:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\LoginController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/toko-api/public/index.php')
+ERROR - 2024-10-03 13:03:28 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:186
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8889, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#6 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#11 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 {main}
-
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#5 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#6 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#10 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#11 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#12 {main}
-CRITICAL - 2024-10-03 13:43:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
-[Method: POST, Route: login]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
-FROM `member`
-WHERE `email` = :email:
- LIMIT 1', [...], false)
- 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
- 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
- 5 APPPATH\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login()
- 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
- 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-ERROR - 2024-10-03 13:43:45 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8889, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#6 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#11 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'toko_api', 8889, '', 0)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #14 {main}
 
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:231
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#5 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#6 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#10 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#11 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#12 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#6 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #13 {main}
-CRITICAL - 2024-10-03 13:43:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+CRITICAL - 2024-10-03 13:03:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
 [Method: POST, Route: login]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
 FROM `member`
 WHERE `email` = :email:
  LIMIT 1', [...], false)
- 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
- 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
- 5 APPPATH\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login()
- 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
- 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-ERROR - 2024-10-03 13:45:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\LoginController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/toko-api/public/index.php')
+ERROR - 2024-10-03 13:03:30 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:186
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8080, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#6 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#11 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'toko_api', 8889, '', 0)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #14 {main}
 
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:231
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#5 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#6 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#10 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#11 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#12 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#6 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #13 {main}
-CRITICAL - 2024-10-03 13:45:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+CRITICAL - 2024-10-03 13:03:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
 [Method: POST, Route: login]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
 FROM `member`
 WHERE `email` = :email:
  LIMIT 1', [...], false)
- 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
- 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
- 5 APPPATH\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login()
- 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
- 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-ERROR - 2024-10-03 13:45:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\LoginController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/toko-api/public/index.php')
+ERROR - 2024-10-03 13:03:45 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:186
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8080, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#6 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#11 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'toko_api', 8889, '', 0)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #14 {main}
 
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/toko-api/system/Database/MySQLi/Connection.php:231
 Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
-#5 D:\App\laragon\www\toko-api\app\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
-#6 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\LoginController->login()
-#7 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#10 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#11 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#12 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
+#0 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/toko-api/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/toko-api/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/toko-api/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/toko-api/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /Applications/MAMP/htdocs/toko-api/app/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+#6 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(933): App\Controllers\LoginController->login()
+#7 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 /Applications/MAMP/htdocs/toko-api/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/toko-api/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/toko-api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/toko-api/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Applications/MAMP/htdocs/toko-api/system/rewrite.php(44): require_once('/Applications/M...')
 #13 {main}
-CRITICAL - 2024-10-03 13:45:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+CRITICAL - 2024-10-03 13:03:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
 [Method: POST, Route: login]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
 FROM `member`
 WHERE `email` = :email:
  LIMIT 1', [...], false)
- 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
- 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
- 5 APPPATH\Controllers\LoginController.php(15): CodeIgniter\BaseModel->first()
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login()
- 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
- 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-CRITICAL - 2024-10-03 13:47:36 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
-[Method: POST, Route: login]
-in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
- 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
- 2 SYSTEMPATH\HTTP\IncomingRequest.php(557): CodeIgniter\HTTP\IncomingRequest->getJSON(true)
- 3 SYSTEMPATH\HTTP\IncomingRequest.php(505): CodeIgniter\HTTP\IncomingRequest->getJsonVar('email', false, null, null)
- 4 APPPATH\Controllers\LoginController.php(11): CodeIgniter\HTTP\IncomingRequest->getVar('email')
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login()
- 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
- 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-11 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-ERROR - 2024-10-03 13:52:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8080, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#6 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#8 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#11 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#12 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#13 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#14 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#15 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#16 {main}
-
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#5 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#6 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#12 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#13 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#14 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#15 {main}
-CRITICAL - 2024-10-03 13:52:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
-[Method: POST, Route: registrasi]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama`, `email`, `password`) VALUES (:nama:, :email:, :password:)', [...], false)
- 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
- 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
- 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
- 6 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
- 7 APPPATH\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save([...])
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
- 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-14 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-ERROR - 2024-10-03 13:55:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8080, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#6 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#8 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#11 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#12 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#13 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#14 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#15 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#16 {main}
-
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#5 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#6 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#12 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#13 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#14 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#15 {main}
-CRITICAL - 2024-10-03 13:55:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
-[Method: POST, Route: registrasi]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama`, `email`, `password`) VALUES (:nama:, :email:, :password:)', [...], false)
- 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
- 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
- 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
- 6 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
- 7 APPPATH\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save([...])
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
- 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-14 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-ERROR - 2024-10-03 13:58:18 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 8889, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#6 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#8 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#11 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#12 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#13 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#14 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#15 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#16 {main}
-
-Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#5 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#6 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#12 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#13 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#14 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#15 {main}
-CRITICAL - 2024-10-03 13:58:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: No connection could be made because the target machine actively refused it
-[Method: POST, Route: registrasi]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama`, `email`, `password`) VALUES (:nama:, :email:, :password:)', [...], false)
- 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
- 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
- 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
- 6 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
- 7 APPPATH\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save([...])
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
- 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-14 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-ERROR - 2024-10-03 13:58:56 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:187
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', 'root', 'toko_api', 3306, '', 0)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#3 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#4 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#5 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#6 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#8 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#11 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#12 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#13 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#14 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#15 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#16 {main}
-
-Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\App\laragon\www\toko-api\system\Database\MySQLi\Connection.php:231
-Stack trace:
-#0 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 D:\App\laragon\www\toko-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
-#2 D:\App\laragon\www\toko-api\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
-#3 D:\App\laragon\www\toko-api\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
-#4 D:\App\laragon\www\toko-api\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
-#5 D:\App\laragon\www\toko-api\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
-#6 D:\App\laragon\www\toko-api\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
-#7 D:\App\laragon\www\toko-api\app\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save(Array)
-#8 D:\App\laragon\www\toko-api\system\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
-#9 D:\App\laragon\www\toko-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-#10 D:\App\laragon\www\toko-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 D:\App\laragon\www\toko-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
-#12 D:\App\laragon\www\toko-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#13 D:\App\laragon\www\toko-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#14 D:\App\laragon\www\toko-api\system\rewrite.php(44): require_once('D:\\App\\laragon\\...')
-#15 {main}
-CRITICAL - 2024-10-03 13:58:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
-Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
-[Method: POST, Route: registrasi]
-in SYSTEMPATH\Database\BaseConnection.php on line 467.
- 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama`, `email`, `password`) VALUES (:nama:, :email:, :password:)', [...], false)
- 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
- 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
- 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
- 6 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
- 7 APPPATH\Controllers\RegistrasiController.php(17): CodeIgniter\BaseModel->save([...])
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
- 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
-10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-14 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
-CRITICAL - 2024-10-03 14:00:28 --> CodeIgniter\Exceptions\ConfigException: Invalid DBDriver name: "MySQL"
-[Method: POST, Route: registrasi]
-in SYSTEMPATH\Database\Database.php on line 172.
- 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('MySQL')
- 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load([...], 'default')
- 3 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect('default')
- 4 APPPATH\Controllers\RegistrasiController.php(16): CodeIgniter\Model->__construct()
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegistrasiController->registrasi()
- 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
- 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-11 SYSTEMPATH\rewrite.php(44): require_once('D:\\App\\laragon\\www\\toko-api\\public\\index.php')
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/LoginController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\LoginController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/toko-api/public/index.php')

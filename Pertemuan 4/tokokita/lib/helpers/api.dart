@@ -7,56 +7,73 @@ class Api {
   Future<dynamic> post(dynamic url, dynamic data) async {
     var token = await UserInfo().getToken();
     var responseJson;
+
     try {
-      final response = await http.post(Uri.parse(url),
-          body: data,
-          headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
-      print(response);
+      final response = await http.post(
+        Uri.parse(url),
+        body: data,
+        headers: {HttpHeaders.authorizationHeader: "Bearer $token"},
+      );
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
     }
+
     return responseJson;
   }
 
   Future<dynamic> get(dynamic url) async {
     var token = await UserInfo().getToken();
     var responseJson;
+
     try {
-      final response = await http.get(Uri.parse(url),
-          headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
+      final response = await http.get(
+        Uri.parse(url),
+        headers: {HttpHeaders.authorizationHeader: "Bearer $token"},
+      );
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
     }
+
     return responseJson;
   }
 
   Future<dynamic> put(dynamic url, dynamic data) async {
     var token = await UserInfo().getToken();
     var responseJson;
+
     try {
-      final response = await http.put(Uri.parse(url), body: data, headers: {
-        HttpHeaders.authorizationHeader: "Bearer $token",
-        HttpHeaders.contentTypeHeader: "application/json"
-      });
+      final response = await http.put(
+        Uri.parse(url),
+        body: data,
+        headers: {
+          HttpHeaders.authorizationHeader: "Bearer $token",
+          HttpHeaders.contentTypeHeader: "application/json",
+        },
+      );
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
     }
+
     return responseJson;
   }
 
   Future<dynamic> delete(dynamic url) async {
     var token = await UserInfo().getToken();
     var responseJson;
+
     try {
-      final response = await http.delete(Uri.parse(url),
-          headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
+      final response = await http.delete(
+        Uri.parse(url),
+        headers: {HttpHeaders.authorizationHeader: "Bearer $token"},
+      );
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
     }
+
     return responseJson;
   }
 
@@ -74,7 +91,7 @@ class Api {
       case 500:
       default:
         throw FetchDataException(
-            'Error occured while Communication with Server with StatusCode : ${response.statusCode}');
+            'Error occurred while communicating with server. StatusCode: ${response.statusCode}');
     }
   }
 }

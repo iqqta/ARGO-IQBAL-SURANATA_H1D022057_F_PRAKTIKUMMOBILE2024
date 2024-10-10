@@ -8,15 +8,13 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
+  const MyApp({Key? key}) : super(key: key);
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
   Widget page = const CircularProgressIndicator();
-
   @override
   void initState() {
     super.initState();

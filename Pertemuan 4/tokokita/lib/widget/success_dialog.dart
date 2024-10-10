@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class Consts {
   Consts._();
-
   static const double padding = 16.0;
   static const double avatarRadius = 66.0;
 }
@@ -10,15 +9,13 @@ class Consts {
 class SuccessDialog extends StatelessWidget {
   final String? description;
   final VoidCallback? okClick;
-
-  const SuccessDialog({super.key, this.description, this.okClick});
-
+  const SuccessDialog({Key? key, this.description, this.okClick})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Dialog(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(Consts.padding),
-      ),
+          borderRadius: BorderRadius.circular(Consts.padding)),
       elevation: 0.0,
       backgroundColor: Colors.transparent,
       child: dialogContent(context),
@@ -52,10 +49,9 @@ class SuccessDialog extends StatelessWidget {
           const Text(
             "SUKSES",
             style: TextStyle(
-              fontSize: 24.0,
-              fontWeight: FontWeight.w700,
-              color: Colors.green,
-            ),
+                fontSize: 24.0,
+                fontWeight: FontWeight.w700,
+                color: Colors.green),
           ),
           const SizedBox(height: 16.0),
           Text(
@@ -70,12 +66,12 @@ class SuccessDialog extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: OutlinedButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).pop(); // To close the dialog
                 okClick!();
               },
               child: const Text("OK"),
             ),
-          ),
+          )
         ],
       ),
     );

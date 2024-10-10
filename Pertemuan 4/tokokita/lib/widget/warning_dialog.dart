@@ -11,7 +11,8 @@ class WarningDialog extends StatelessWidget {
   final String? description;
   final VoidCallback? okClick;
 
-  const WarningDialog({super.key, this.description, this.okClick});
+  const WarningDialog({Key? key, this.description, this.okClick})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +26,9 @@ class WarningDialog extends StatelessWidget {
     );
   }
 
-  dialogContent(BuildContext context) {
+  Widget dialogContent(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(
-        top: Consts.padding,
-        bottom: Consts.padding,
-        left: Consts.padding,
-        right: Consts.padding,
-      ),
+      padding: const EdgeInsets.all(Consts.padding),
       margin: const EdgeInsets.only(top: Consts.avatarRadius),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -70,8 +66,7 @@ class WarningDialog extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pop();
-                okClick!();
+                Navigator.of(context).pop(); // To close the dialog
               },
               child: const Text("OK"),
             ),
