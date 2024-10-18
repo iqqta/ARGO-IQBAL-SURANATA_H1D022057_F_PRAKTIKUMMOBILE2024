@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                   _saveUsername();
 
                   // Tampilkan dialog berhasil login dan pindah ke HomePage
-                  _showDialog('Anda Berhasil Login', HomeScreen());
+                  _showDialog('Anda Berhasil Login', const HomeScreen());
                 } else {
                   // Tampilkan dialog error jika login gagal
                   _showDialog('Username dan Password Salah', const LoginPage());
