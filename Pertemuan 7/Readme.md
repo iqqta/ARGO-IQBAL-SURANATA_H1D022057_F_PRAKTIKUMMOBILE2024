@@ -1,2 +1,2 @@
-![Menu](sidemenu.jpg)
-![Content](content.jpg)
+![Menu](sidemenu.jpeg)
+![Content](content.jpeg)
