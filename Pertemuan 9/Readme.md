@@ -25,6 +25,6 @@ Jika berhasil, data di-refresh dengan getMahasiswa(), form di-reset, dan modal d
 DELETE
 ![Delete Modal](delete.png)
 ![List After Del](listafterdel.png)
-Fungsi confirmDelete() memunculkan modal konfirmasi kepada pengguna untuk memastikan bahwa mereka ingin menghapus data.
+Fungsi confirmDelete() memunculkan modal konfirmasi kepada pengguna untuk memastikan qbahwa ingin menghapus data.
 Jika pengguna mengonfirmasi, hapusMahasiswa() dipanggil, yang mengirim permintaan penghapusan ke server dengan api.hapus(id, 'hapus.php?id=').
 Jika penghapusan berhasil, data di-refresh menggunakan getMahasiswa() untuk memastikan data terbaru tampil di aplikasi.
