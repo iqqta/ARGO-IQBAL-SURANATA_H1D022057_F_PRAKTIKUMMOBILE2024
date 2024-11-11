@@ -8,7 +8,7 @@ Data yang diterima dari server disimpan dalam variabel dataMahasiswa, yang kemud
 
 CREATE
 ![Form Create](create.png)
-![List After Create](lisaftercreate.png)
+![List After Create](listaftercreate.png)
 Fungsi tambahMahasiswa() memungkinkan pengguna menambahkan data baru (nama dan jurusan) untuk mahasiswa.
 Fungsi ini memeriksa apakah kolom nama dan jurusan sudah diisi.
 Jika valid, data dikirim ke server menggunakan metode api.tambah(data, 'tambah.php').
