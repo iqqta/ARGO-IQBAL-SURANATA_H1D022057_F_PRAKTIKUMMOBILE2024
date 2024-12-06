@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Avatar profil di pojok kanan atas -->
+    
+    <ion-title>
+      Sejarah Pahlawan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="notes-page">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Daftar Sejarah</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Menampilkan pesan jika tidak ada catatan -->
+  <div *ngIf="notes.length === 0" class="no-notes">
+    <p>Tidak ada sejarah.</p>
+  </div>
+
+  <!-- Menampilkan daftar catatan -->
+  <ion-card *ngFor="let note of notes" (click)="viewNote(note.id || '')">
+    <ion-card-header>
+      <ion-card-title>{{ note.title }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content class="card-content">
+      <div class="note-text">
+        <p>{{ note.description || 'Tidak ada deskripsi.' }}</p>
+      </div>
+
+      <!-- Tombol hapus catatan -->
+      <ion-button color="danger" fill="clear" class="delete-button" (click)="deleteNote(note.id); $event.stopPropagation()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tombol untuk menambah catatan baru (floating action button) -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="fab-button">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
